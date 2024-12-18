@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Версия</title>
+    <meta charset="utf-8" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;0,800;0,900;0,1000;1,300;1,400;1,500;1,700;1,800;1,900;1,1000&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    html,
+    body {
+        height: 100%;
+        overflow: auto;
+    }
+
+    .ubuntu-mono-regular {
+        font-family: "Ubuntu Mono", monospace;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .ubuntu-mono-bold {
+        font-family: "Ubuntu Mono", monospace;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    .ubuntu-mono-regular-italic {
+        font-family: "Ubuntu Mono", monospace;
+        font-weight: 400;
+        font-style: italic;
+    }
+
+    .ubuntu-mono-bold-italic {
+        font-family: "Ubuntu Mono", monospace;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    .ubuntu-light {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    .ubuntu-regular {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .ubuntu-medium {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    .ubuntu-bold {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    .ubuntu-black {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 1000;
+        font-style: normal;
+    }
+
+    .ubuntu-light-italic {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 300;
+        font-style: italic;
+    }
+
+    .ubuntu-regular-italic {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 400;
+        font-style: italic;
+    }
+
+    .ubuntu-medium-italic {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+        font-style: italic;
+    }
+
+    .ubuntu-bold-italic {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    * {
+        scrollbar-color: red orange;
+        scrollbar-width: none;
+    }
+</style>
+
+<body class="bg-[#000000] flex justify-between text-white px-12">
+    <div class="flex flex-col gap-6 py-12 px-6">
+        <div class="flex gap-4">
+            <a id="tg1"
+                class="select-none cursor-pointer rounded-xl px-3.5 py-2 bg-red-700 hover:brightness-[125%] duration-[150ms] group duration-[150ms]"
+                onclick="toggle(1)">
+                <div class="flex gap-1.5 items-center justify-center">
+                    <img src="https://www.svgrepo.com/show/451850/process-stop.svg" id="tgi1"
+                        class="size-5 invert brightness-[0%]">
+                    <h1 class="ubuntu-medium text-xl select-none text-[#ffffff]">Я согласен с Minecraft EULA</h1>
+                </div>
+            </a>
+        </div>
+        <div class="flex gap-4">
+            <div class="flex gap-2">
+
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var toggled = [false, false];
+    function toggle(num) {
+        if (toggled[num]) {
+            document.getElementById(`tg${num}`).classList.remove("bg-green-700");
+            document.getElementById(`tg${num}`).classList.add("bg-red-700");
+            document.getElementById(`tgi${num}`).src = "https://www.svgrepo.com/show/451850/process-stop.svg";
+        } else {
+            document.getElementById(`tg${num}`).classList.remove("bg-red-700");
+            document.getElementById(`tg${num}`).classList.add("bg-green-700");
+            document.getElementById(`tgi${num}`).src = "https://www.svgrepo.com/show/451803/object-select.svg";
+        }
+        toggled[num] = !toggled[num];
+    }
+</script>
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Версия</title>
+    <meta charset="utf-8" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;0,800;0,900;0,1000;1,300;1,400;1,500;1,700;1,800;1,900;1,1000&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    .ubuntu-mono-regular {
+        font-family: "Ubuntu Mono", monospace;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .ubuntu-mono-bold {
+        font-family: "Ubuntu Mono", monospace;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    .ubuntu-mono-regular-italic {
+        font-family: "Ubuntu Mono", monospace;
+        font-weight: 400;
+        font-style: italic;
+    }
+
+    .ubuntu-mono-bold-italic {
+        font-family: "Ubuntu Mono", monospace;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    .ubuntu-light {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    .ubuntu-regular {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .ubuntu-medium {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    .ubuntu-bold {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    .ubuntu-black {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 1000;
+        font-style: normal;
+    }
+
+    .ubuntu-light-italic {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 300;
+        font-style: italic;
+    }
+
+    .ubuntu-regular-italic {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 400;
+        font-style: italic;
+    }
+
+    .ubuntu-medium-italic {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+        font-style: italic;
+    }
+
+    .ubuntu-bold-italic {
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    * {
+        scrollbar-color: red orange;
+        scrollbar-width: none;
+    }
+</style>
+
+<body class="bg-[#000000] flex justify-between text-white px-12">
+    <div class="flex flex-col gap-6 py-12 px-6">
+        <div class="flex flex-col">
+            <div class="relative inline-block text-left">
+                <div onmouseenter="show('filter')" class="inline-flex w-full justify-center select-none">
+                    <a id="filterb"
+                        class="cursor-pointer rounded-t-xl rounded-b-xl px-3.5 py-2 bg-zinc-900 duration-[150ms] group">
+                        <div class="flex gap-1.5 items-center justify-center gap-6">
+                            <h1 class="ubuntu-medium text-lg select-none text-[#bcbcbc] duration-[150ms]">
+                                Версия JAVA</h1>
+                            <img src="https://www.svgrepo.com/show/451651/go-down.svg"
+                                class="invert brightness-[200%] duration-[150ms] size-3">
+                        </div>
+                    </a>
+                </div>
+                <div id="filter" onmouseleave="hide('filter')"
+                    class="p-1.5 mt-2 absolute right-0 z-10 scale-[60%] bg-zinc-900 w-full rounded-xl border-2 border-zinc-800 invisible flex opacity-[0%] flex-col duration-[200ms]">
+                    <div class="py-1 px-3.5 group hover:cursor-pointer duration-[175ms] justify-between text-center">
+                        <h1 class="font-black text-7xl group-hover:text-cyan-500 duration-[150ms] select-none">21</h1>
+                    </div>
+                    <div class="py-1 px-3.5 group hover:cursor-pointer duration-[175ms] justify-between text-center">
+                        <h1 class="font-black text-7xl group-hover:text-cyan-500 duration-[150ms] select-none">19</h1>
+                    </div>
+                    <div class="py-1 px-3.5 group hover:cursor-pointer duration-[175ms] justify-between text-center">
+                        <h1 class="font-black text-7xl group-hover:text-cyan-500 duration-[150ms] select-none">18</h1>
+                    </div>
+                    <div class="py-1 px-3.5 group hover:cursor-pointer duration-[175ms] justify-between text-center">
+                        <h1 class="font-black text-7xl group-hover:text-cyan-500 duration-[150ms] select-none">17</h1>
+                    </div>
+                    <div class="py-1 px-3.5 group hover:cursor-pointer duration-[175ms] justify-between text-center">
+                        <h1 class="font-black text-7xl group-hover:text-cyan-500 duration-[150ms] select-none">16</h1>
+                    </div>
+                    <div class="py-1 px-3.5 group hover:cursor-pointer duration-[175ms] justify-between text-center">
+                        <h1 class="font-black text-7xl group-hover:text-cyan-500 duration-[150ms] select-none">11</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function show(element) {
+        document.getElementById(element).classList.remove("invisible");
+        document.getElementById(element).classList.remove("opacity-[0%]");
+        document.getElementById(element).classList.remove("scale-[60%]");
+        document.getElementById(element).classList.add("scale-[100%]");
+    }
+
+    function hide(element) {
+        document.getElementById(element).classList.add("invisible");
+        document.getElementById(element).classList.add("opacity-[0%]");
+        document.getElementById(element).classList.add("scale-[60%]");
+        document.getElementById(element).classList.remove("scale-[100%]");
+    }
+</script>
+
+</html>
