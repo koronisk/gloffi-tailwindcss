@@ -14,6 +14,12 @@
         rel="stylesheet">
 </head>
 <style>
+    html,
+    body {
+        height: 100%;
+        overflow: auto;
+    }
+
     .ubuntu-mono-regular {
         font-family: "Ubuntu Mono", monospace;
         font-weight: 400;
@@ -98,59 +104,206 @@
     }
 </style>
 
-<body class="bg-[#000000] flex justify-between text-white px-12">
+<body class="bg-[#000000] flex justify-between text-white px-12" onload="select(1); select2(1); select3(1); selectbig(1);">
     <div class="flex flex-col gap-6 py-12 px-6">
-        <div class="flex flex-col">
-            <div class="relative inline-block text-left">
-                <div onmouseenter="show('filter')" class="inline-flex w-full justify-center select-none">
-                    <a id="filterb"
-                        class="cursor-pointer rounded-t-xl rounded-b-xl px-3.5 py-2 bg-zinc-900 duration-[150ms] group">
-                        <div class="flex gap-1.5 items-center justify-center gap-6">
-                            <h1 class="ubuntu-medium text-lg select-none text-[#bcbcbc] duration-[150ms]">
-                                Версия JAVA</h1>
-                            <img src="https://www.svgrepo.com/show/451651/go-down.svg"
-                                class="invert brightness-[200%] duration-[150ms] size-3">
-                        </div>
-                    </a>
-                </div>
-                <div id="filter" onmouseleave="hide('filter')"
-                    class="p-1.5 mt-2 absolute right-0 z-10 scale-[60%] bg-zinc-900 w-full rounded-xl border-2 border-zinc-800 invisible flex opacity-[0%] flex-col duration-[200ms]">
-                    <div class="py-1 px-3.5 group hover:cursor-pointer duration-[175ms] justify-between text-center">
-                        <h1 class="font-black text-7xl group-hover:text-cyan-500 duration-[150ms] select-none">21</h1>
+        <div class="flex gap-4">
+            <div class="flex gap-0 border-2 rounded-xl border-cyan-700">
+                <a id="e11"
+                    class="select-none cursor-pointer rounded-l-xl px-3.5 py-2 bg-transparent hover:bg-neutral-700 duration-[250ms] group"
+                    onclick="select(1)">
+                    <div class="flex gap-1.5 items-center justify-center">
+                        <img src="https://www.svgrepo.com/show/451836/preferences-other.svg" id="e21"
+                            class="invert brightness-[200%] group-hover:brightness-[80%] duration-[150ms] size-5">
+                        <h1 id="e31"
+                            class="ubuntu-medium text-xl select-none text-[#ababab] group-hover:text-[#efefef] duration-[150ms]">
+                            Сатана</h1>
                     </div>
-                    <div class="py-1 px-3.5 group hover:cursor-pointer duration-[175ms] justify-between text-center">
-                        <h1 class="font-black text-7xl group-hover:text-cyan-500 duration-[150ms] select-none">19</h1>
+                </a>
+                <a id="e12"
+                    class="select-none cursor-pointer px-3.5 py-2 bg-transparent hover:bg-neutral-700 duration-[250ms] group"
+                    onclick="select(2)">
+                    <div class="flex gap-1.5 items-center justify-center">
+                        <img src="https://www.svgrepo.com/show/451836/preferences-other.svg" id="e22"
+                            class="invert brightness-[200%] group-hover:brightness-[80%] duration-[150ms] size-5">
+                        <h1 id="e32"
+                            class="ubuntu-medium text-xl select-none text-[#ababab] group-hover:text-[#efefef] duration-[150ms]">
+                            Могила</h1>
                     </div>
-                    <div class="py-1 px-3.5 group hover:cursor-pointer duration-[175ms] justify-between text-center">
-                        <h1 class="font-black text-7xl group-hover:text-cyan-500 duration-[150ms] select-none">18</h1>
+                </a>
+                <a id="e13"
+                    class="select-none cursor-pointer rounded-r-xl px-3.5 py-2 bg-cyan-700 hover:bg-cyan-600 duration-[250ms] group"
+                    onclick="select(3)">
+                    <div class="flex gap-1.5 items-center justify-center">
+                        <img src="https://www.svgrepo.com/show/451836/preferences-other.svg" id="e23"
+                            class="invert brightness-[0%] group-hover:brightness-[80%] duration-[150ms] size-5">
+                        <h1 id="e33"
+                            class="ubuntu-medium text-xl select-none text-[#ffffff] group-hover:text-[#efefef] duration-[150ms]">
+                            Кладбище</h1>
                     </div>
-                    <div class="py-1 px-3.5 group hover:cursor-pointer duration-[175ms] justify-between text-center">
-                        <h1 class="font-black text-7xl group-hover:text-cyan-500 duration-[150ms] select-none">17</h1>
+                </a>
+            </div>
+        </div>
+        <div class="flex gap-4">
+            <div class="flex gap-0 border-2 rounded-xl border-cyan-700">
+                <a id="eee11"
+                    class="select-none cursor-pointer rounded-l-xl px-3.5 py-2 bg-transparent hover:bg-neutral-700 duration-[250ms] group"
+                    onclick="select3(1)">
+                    <div class="flex gap-1.5 items-center justify-center">
+                        <img src="https://www.svgrepo.com/show/451576/emoji-body.svg" id="eee21"
+                            class="invert brightness-[200%] group-hover:brightness-[80%] duration-[150ms] size-5">
+                        <h1 id="eee31"
+                            class="ubuntu-medium text-xl select-none text-[#ababab] group-hover:text-[#efefef] duration-[150ms]">
+                            Понятная</h1>
                     </div>
-                    <div class="py-1 px-3.5 group hover:cursor-pointer duration-[175ms] justify-between text-center">
-                        <h1 class="font-black text-7xl group-hover:text-cyan-500 duration-[150ms] select-none">16</h1>
+                </a>
+                <a id="eee13"
+                    class="select-none cursor-pointer rounded-r-xl px-3.5 py-2 bg-cyan-700 hover:bg-cyan-600 duration-[250ms] group"
+                    onclick="select3(3)">
+                    <div class="flex gap-1.5 items-center justify-center">
+                        <img src="https://www.svgrepo.com/show/451590/face-cool.svg" id="eee23"
+                            class="invert brightness-[0%] group-hover:brightness-[80%] duration-[150ms] size-5">
+                        <h1 id="eee33"
+                            class="ubuntu-medium text-xl select-none text-[#ffffff] group-hover:text-[#efefef] duration-[150ms]">
+                            Продвинутая</h1>
                     </div>
-                    <div class="py-1 px-3.5 group hover:cursor-pointer duration-[175ms] justify-between text-center">
-                        <h1 class="font-black text-7xl group-hover:text-cyan-500 duration-[150ms] select-none">11</h1>
+                </a>
+            </div>
+        </div>
+        <div class="flex gap-4">
+            <div class="flex gap-0 border-2 rounded-xl border-cyan-700">
+                <a id="ee11"
+                    class="select-none cursor-pointer rounded-l-xl px-3.5 py-2 bg-transparent hover:bg-neutral-700 duration-[250ms] group"
+                    onclick="select2(1)">
+                    <div class="flex gap-1.5 items-center justify-center">
+                        <img src="https://em-content.zobj.net/source/apple/325/flag-russia_1f1f7-1f1fa.png" id="ee21"
+                            class="size-5">
+                        <h1 id="ee31"
+                            class="ubuntu-medium text-xl select-none text-[#ababab] group-hover:text-[#efefef] duration-[150ms]">
+                            Москва</h1>
                     </div>
-                </div>
+                </a>
+                <a id="ee12"
+                    class="select-none cursor-pointer px-3.5 py-2 bg-transparent hover:bg-neutral-700 duration-[250ms] group"
+                    onclick="select2(2)">
+                    <div class="flex gap-1.5 items-center justify-center">
+                        <img src="https://em-content.zobj.net/source/apple/325/flag-russia_1f1f7-1f1fa.png" id="ee22"
+                            class="size-5">
+                        <h1 id="ee32"
+                            class="ubuntu-medium text-xl select-none text-[#ababab] group-hover:text-[#efefef] duration-[150ms]">
+                            Саратов</h1>
+                    </div>
+                </a>
+                <a id="ee13"
+                    class="select-none cursor-pointer rounded-r-xl px-3.5 py-2 bg-cyan-700 hover:bg-cyan-600 duration-[250ms] group"
+                    onclick="select2(3)">
+                    <div class="flex gap-1.5 items-center justify-center">
+                        <img src="https://em-content.zobj.net/source/apple/325/flag-russia_1f1f7-1f1fa.png" id="ee23"
+                            class="size-5">
+                        <h1 id="ee33"
+                            class="ubuntu-medium text-xl select-none text-[#ffffff] group-hover:text-[#efefef] duration-[150ms]">
+                            Волгоград</h1>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="flex gap-4">
+            <div id="b1"
+                class="w-4/12 flex flex-col gap-0 bg-zinc-900 rounded-xl py-4 pb-8 px-6 gap-1.5 border-zinc-900 duration-[150ms] border-2 hover:border-cyan-800 hover:cursor-pointer"
+                onclick="selectbig(1)">
+                <h1 class="ubuntu-mono-bold text-3xl">Вариант 1</h1>
+                <h1 class="ubuntu-regular text-sm">Gloffy реально упрощает работу! Удобный интерфейс и полезный
+                    функционал. Отлично организует задачи и проекты.</h1>
+            </div>
+            <div id="b2"
+                class="w-4/12 flex flex-col gap-0 bg-zinc-900 rounded-xl py-4 pb-8 px-6 gap-1.5 border-zinc-900 duration-[150ms] border-2 hover:border-cyan-800 hover:cursor-pointer"
+                onclick="selectbig(2)">
+                <h1 class="ubuntu-mono-bold text-3xl">Вариант 2</h1>
+                <h1 class="ubuntu-regular text-sm">Gloffy реально упрощает работу! Удобный интерфейс и полезный
+                    функционал. Отлично организует задачи и проекты.</h1>
+            </div>
+            <div id="b3"
+                class="w-4/12 flex flex-col gap-0 bg-zinc-900 rounded-xl py-4 pb-8 px-6 gap-1.5 border-zinc-900 duration-[150ms] border-2 hover:border-cyan-800 hover:cursor-pointer"
+                onclick="selectbig(3)">
+                <h1 class="ubuntu-mono-bold text-3xl">Вариант 3</h1>
+                <h1 class="ubuntu-regular text-sm">Gloffy реально упрощает работу! Удобный интерфейс и полезный
+                    функционал. Отлично организует задачи и проекты.</h1>
             </div>
         </div>
     </div>
 </body>
 <script>
-    function show(element) {
-        document.getElementById(element).classList.remove("invisible");
-        document.getElementById(element).classList.remove("opacity-[0%]");
-        document.getElementById(element).classList.remove("scale-[60%]");
-        document.getElementById(element).classList.add("scale-[100%]");
+    function selectbig(num) {
+        document.getElementById(`b1`).classList.remove("bg-cyan-800");
+        document.getElementById(`b1`).classList.remove("border-cyan-800");
+        document.getElementById(`b2`).classList.remove("bg-cyan-800");
+        document.getElementById(`b2`).classList.remove("border-cyan-800");
+        document.getElementById(`b3`).classList.remove("bg-cyan-800");
+        document.getElementById(`b3`).classList.remove("border-cyan-800");
+
+        if (document.getElementById(`b${num}`).classList.contains("bg-cyan-800")) {
+            document.getElementById(`b${num}`).classList.remove("bg-cyan-800");
+            document.getElementById(`b${num}`).classList.remove("border-cyan-800");
+        }
+        else {
+            document.getElementById(`b${num}`).classList.add("bg-cyan-800");
+            document.getElementById(`b${num}`).classList.add("border-cyan-800");
+        }
     }
 
-    function hide(element) {
-        document.getElementById(element).classList.add("invisible");
-        document.getElementById(element).classList.add("opacity-[0%]");
-        document.getElementById(element).classList.add("scale-[60%]");
-        document.getElementById(element).classList.remove("scale-[100%]");
+    function select(num) {
+        document.getElementById(`e11`).className = "select-none cursor-pointer rounded-l-xl px-3.5 py-2 bg-transparent hover:bg-neutral-700 duration-[250ms] group";
+        document.getElementById(`e21`).className = "invert brightness-[200%] group-hover:brightness-[80%] duration-[150ms] size-5";
+        document.getElementById(`e31`).className = "ubuntu-medium text-xl select-none text-[#ababab] group-hover:text-[#efefef] duration-[150ms]";
+
+        document.getElementById(`e12`).className = "select-none cursor-pointer px-3.5 py-2 bg-transparent hover:bg-neutral-700 duration-[250ms] group";
+        document.getElementById(`e22`).className = "invert brightness-[200%] group-hover:brightness-[80%] duration-[150ms] size-5";
+        document.getElementById(`e32`).className = "ubuntu-medium text-xl select-none text-[#ababab] group-hover:text-[#efefef] duration-[150ms]";
+
+        document.getElementById(`e13`).className = "select-none cursor-pointer rounded-r-xl px-3.5 py-2 bg-transparent hover:bg-neutral-700 duration-[250ms] group";
+        document.getElementById(`e23`).className = "invert brightness-[200%] group-hover:brightness-[80%] duration-[150ms] size-5";
+        document.getElementById(`e33`).className = "ubuntu-medium text-xl select-none text-[#ababab] group-hover:text-[#efefef] duration-[150ms]";
+
+        document.getElementById(`e1${num}`).classList.remove("hover:bg-neutral-700");
+        document.getElementById(`e1${num}`).classList.remove("bg-transparent");
+        document.getElementById(`e1${num}`).classList.add("bg-cyan-700");
+        document.getElementById(`e2${num}`).className = "invert brightness-[0%] group-hover:brightness-[80%] duration-[150ms] size-5";
+        document.getElementById(`e3${num}`).className = "ubuntu-medium text-xl select-none text-[#ffffff] group-hover:text-[#efefef] duration-[150ms]";
+    }
+
+    function select3(num) {
+        document.getElementById(`eee11`).className = "select-none cursor-pointer rounded-l-xl px-3.5 py-2 bg-transparent hover:bg-neutral-700 duration-[250ms] group";
+        document.getElementById(`eee21`).className = "invert brightness-[200%] group-hover:brightness-[80%] duration-[150ms] size-5";
+        document.getElementById(`eee31`).className = "ubuntu-medium text-xl select-none text-[#ababab] group-hover:text-[#efefef] duration-[150ms]";
+
+        document.getElementById(`eee13`).className = "select-none cursor-pointer rounded-r-xl px-3.5 py-2 bg-transparent hover:bg-neutral-700 duration-[250ms] group";
+        document.getElementById(`eee23`).className = "invert brightness-[200%] group-hover:brightness-[80%] duration-[150ms] size-5";
+        document.getElementById(`eee33`).className = "ubuntu-medium text-xl select-none text-[#ababab] group-hover:text-[#efefef] duration-[150ms]";
+
+        document.getElementById(`eee1${num}`).classList.remove("hover:bg-neutral-700");
+        document.getElementById(`eee1${num}`).classList.remove("bg-transparent");
+        document.getElementById(`eee1${num}`).classList.add("bg-cyan-700");
+        document.getElementById(`eee2${num}`).className = "invert brightness-[0%] group-hover:brightness-[80%] duration-[150ms] size-5";
+        document.getElementById(`eee3${num}`).className = "ubuntu-medium text-xl select-none text-[#ffffff] group-hover:text-[#efefef] duration-[150ms]";
+    }
+
+    function select2(num) {
+        document.getElementById(`ee11`).className = "select-none cursor-pointer rounded-l-xl px-3.5 py-2 bg-transparent hover:bg-neutral-700 duration-[250ms] group";
+        document.getElementById(`ee21`).className = "size-5";
+        document.getElementById(`ee31`).className = "ubuntu-medium text-xl select-none text-[#ababab] group-hover:text-[#efefef] duration-[150ms]";
+
+        document.getElementById(`ee12`).className = "select-none cursor-pointer px-3.5 py-2 bg-transparent hover:bg-neutral-700 duration-[250ms] group";
+        document.getElementById(`ee22`).className = "size-5";
+        document.getElementById(`ee32`).className = "ubuntu-medium text-xl select-none text-[#ababab] group-hover:text-[#efefef] duration-[150ms]";
+
+        document.getElementById(`ee13`).className = "select-none cursor-pointer rounded-r-xl px-3.5 py-2 bg-transparent hover:bg-neutral-700 duration-[250ms] group";
+        document.getElementById(`ee23`).className = "size-5";
+        document.getElementById(`ee33`).className = "ubuntu-medium text-xl select-none text-[#ababab] group-hover:text-[#efefef] duration-[150ms]";
+
+        document.getElementById(`ee1${num}`).classList.remove("hover:bg-neutral-700");
+        document.getElementById(`ee1${num}`).classList.remove("bg-transparent");
+        document.getElementById(`ee1${num}`).classList.add("bg-cyan-700");
+        document.getElementById(`ee2${num}`).className = "brightness-[120%] size-5";
+        document.getElementById(`ee3${num}`).className = "ubuntu-medium text-xl select-none text-[#ffffff] group-hover:text-[#efefef] duration-[150ms]";
     }
 </script>
 

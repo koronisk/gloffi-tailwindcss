@@ -108,8 +108,8 @@
     <div class="flex flex-col gap-6 py-12 px-6">
         <div class="flex gap-4">
             <a id="tg1"
-                class="select-none cursor-pointer rounded-xl px-3.5 py-2 bg-red-700 hover:brightness-[125%] duration-[150ms] group duration-[150ms]"
-                onclick="toggle(1)">
+                class="select-none cursor-pointer rounded-xl px-3.5 py-2 bg-red-700 hover:brightness-[125%] duration-[155ms] group "
+                onclick="toggle(1, true, false)">
                 <div class="flex gap-1.5 items-center justify-center">
                     <img src="https://www.svgrepo.com/show/451850/process-stop.svg" id="tgi1"
                         class="size-5 invert brightness-[0%]">
@@ -118,23 +118,40 @@
             </a>
         </div>
         <div class="flex gap-4">
-            <div class="flex gap-2">
-
+            <div class="flex gap-2 items-center justify-center hover:cursor-default hover:brightness-[90%] duration-[150ms]" onclick="toggle(2, false, true)">
+                <a id="tg2"
+                    class="select-none rounded-md px-1 py-1 bg-zinc-700 border-zinc-700 border-2">
+                    <div class="flex gap-1.5 items-center justify-center">
+                        <img src="https://www.svgrepo.com/show/451850/process-stop.svg" id="tgi2"
+                            class="size-4 invert brightness-[0%]">
+                    </div>
+                </a>
+                <h1 class="ubuntu-mono-regular text-2xl">Автоматические бэкапы — <span id="tgc2" class="decoration-[3px] line-through">77.7 ₽</span></h1>
             </div>
         </div>
     </div>
 </body>
 <script>
     var toggled = [false, false];
-    function toggle(num) {
+    function toggle(num, color, cross) {
         if (toggled[num]) {
-            document.getElementById(`tg${num}`).classList.remove("bg-green-700");
-            document.getElementById(`tg${num}`).classList.add("bg-red-700");
             document.getElementById(`tgi${num}`).src = "https://www.svgrepo.com/show/451850/process-stop.svg";
+            if (color) {
+                document.getElementById(`tg${num}`).classList.remove("bg-green-700");
+                document.getElementById(`tg${num}`).classList.add("bg-red-700");
+            }
+            if (cross) {
+                document.getElementById(`tgc${num}`).classList.add("line-through");
+            }
         } else {
-            document.getElementById(`tg${num}`).classList.remove("bg-red-700");
-            document.getElementById(`tg${num}`).classList.add("bg-green-700");
             document.getElementById(`tgi${num}`).src = "https://www.svgrepo.com/show/451803/object-select.svg";
+            if (color) {
+                document.getElementById(`tg${num}`).classList.remove("bg-red-700");
+                document.getElementById(`tg${num}`).classList.add("bg-green-700");
+            }
+            if (cross) {
+                document.getElementById(`tgc${num}`).classList.remove("line-through");
+            }
         }
         toggled[num] = !toggled[num];
     }
